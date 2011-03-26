@@ -7,7 +7,7 @@
 #
 
 class Photo
-  attr_accessor :imageUID, :imageTitle
+  attr_accessor :imageUID, :imageTitle, :crop
   
   def imageRepresentation
       imageUID

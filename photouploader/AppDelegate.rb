@@ -11,10 +11,12 @@ class AppDelegate
   
   def applicationDidFinishLaunching(a_notification)
     @images = NSMutableArray.array
+    imageView.setDoubleClickOpensImageEditPanel false
+    imageView.setCurrentToolMode IKToolModeCrop
   end
   
   def application(sender, openFiles:files)
-    add_files file
+    add_files files
   end
   
   def add_files files
@@ -44,15 +46,20 @@ class AppDelegate
   
   def imageBrowserSelectionDidChange(browser)
     index = browser.selectionIndexes.firstIndex
-    url = NSURL.fileURLWithPath @images[index].imageUID
-    
+    image = @images[index]   
+    url = NSURL.fileURLWithPath image.imageUID
     imageView.setImageWithURL url
+    
+    if image.crop
+      imageView.selectionRect = image.crop
+    end
   end
 
-  #stuff for imageView
-  def selectionRectAdded(imageView)
-    puts "OK"
+  # stuff for imageView
+  # this method is both private, and the selectionRect is too
+  def selectionRectChanged(imageView)
+    index = imageBrowserView.selectionIndexes.firstIndex
+    @images[index].crop = @imageView.selectionRect
   end
-  
 end
 

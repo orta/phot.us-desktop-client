@@ -81,6 +81,7 @@
 		60A472E9133E7A33001B6B37 /* photouploader */ = {
 			isa = PBXGroup;
 			children = (
+				60F74A4A133E9A6B002E1AD1 /* Tests */,
 				60F74A47133E8DF4002E1AD1 /* Models */,
 				60A47307133E7B45001B6B37 /* Controllers */,
 				60A472F9133E7A33001B6B37 /* AppDelegate.rb */,
@@ -131,6 +132,13 @@
 				60F74A48133E8E06002E1AD1 /* Photo.rb */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		60F74A4A133E9A6B002E1AD1 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
