@@ -31,8 +31,8 @@ class AppDelegate
     @images[index]
   end
   
-  def imageBrowser(aBrowser removeItemsAtIndexes: indexes)
-    @images.removeObjectsAtIndexes indexes 
+  def imageBrowser(aBrowser, removeItemsAtIndexes:indexes)
+    @images.removeObjectsAtIndexes indexes
     imageView.reloadData
   end
 
