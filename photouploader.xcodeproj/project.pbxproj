@@ -17,6 +17,7 @@
 		60A47317133E8214001B6B37 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A47316133E8214001B6B37 /* QuartzCore.framework */; };
 		60F74A46133E8AB9002E1AD1 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F74A45133E8AB9002E1AD1 /* Quartz.framework */; };
 		60F74A49133E8E06002E1AD1 /* Photo.rb in Resources */ = {isa = PBXBuildFile; fileRef = 60F74A48133E8E06002E1AD1 /* Photo.rb */; };
+		60F74A4C133E9D49002E1AD1 /* PhotoController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 60F74A4B133E9D49002E1AD1 /* PhotoController.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		60A47316133E8214001B6B37 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		60F74A45133E8AB9002E1AD1 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		60F74A48133E8E06002E1AD1 /* Photo.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = Photo.rb; path = models/Photo.rb; sourceTree = "<group>"; };
+		60F74A4B133E9D49002E1AD1 /* PhotoController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = PhotoController.rb; path = controllers/PhotoController.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		60A47307133E7B45001B6B37 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				60F74A4B133E9D49002E1AD1 /* PhotoController.rb */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				60A472F8133E7A33001B6B37 /* rb_main.rb in Resources */,
 				60A472FA133E7A33001B6B37 /* AppDelegate.rb in Resources */,
 				60F74A49133E8E06002E1AD1 /* Photo.rb in Resources */,
+				60F74A4C133E9D49002E1AD1 /* PhotoController.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
