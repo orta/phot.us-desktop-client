@@ -9,6 +9,10 @@
 class AppDelegate
   attr_accessor :window, :imageView
   
+  def applicationDidFinishLaunching(a_notification)
+    @images = NSMutableArray.array
+  end
+  
   def application(sender, openFiles:files)
     files.each do |file_path|
       photo = Photo.new
@@ -19,8 +23,6 @@ class AppDelegate
     imageView.reloadData
   end
   
-  #pragma --
-  
   def numberOfItemsInImageBrowser(view)
     @images.count
   end
@@ -29,8 +31,11 @@ class AppDelegate
     @images[index]
   end
   
-  def applicationDidFinishLaunching(a_notification)
-    @images = NSMutableArray.array
+  def imageBrowser(aBrowser removeItemsAtIndexes: indexes)
+    @images.removeObjectsAtIndexes indexes 
+    imageView.reloadData
   end
+
+  
 end
 
