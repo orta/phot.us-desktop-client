@@ -1,0 +1,349 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		60A472E5133E7A33001B6B37 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A472E4133E7A33001B6B37 /* Cocoa.framework */; };
+		60A472EE133E7A33001B6B37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60A472EC133E7A33001B6B37 /* InfoPlist.strings */; };
+		60A472F1133E7A33001B6B37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A472F0133E7A33001B6B37 /* main.m */; };
+		60A472F5133E7A33001B6B37 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60A472F3133E7A33001B6B37 /* MainMenu.xib */; };
+		60A472F8133E7A33001B6B37 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 60A472F7133E7A33001B6B37 /* rb_main.rb */; };
+		60A472FA133E7A33001B6B37 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 60A472F9133E7A33001B6B37 /* AppDelegate.rb */; };
+		60A47304133E7A8A001B6B37 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A47303133E7A8A001B6B37 /* MacRuby.framework */; };
+		60A47306133E7AE1001B6B37 /* AppViewController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 60A47305133E7AE1001B6B37 /* AppViewController.rb */; };
+		60A47317133E8214001B6B37 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A47316133E8214001B6B37 /* QuartzCore.framework */; };
+		60F74A3B133E896B002E1AD1 /* OverlayView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 60F74A3A133E896B002E1AD1 /* OverlayView.rb */; };
+		60F74A46133E8AB9002E1AD1 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F74A45133E8AB9002E1AD1 /* Quartz.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		60A472E0133E7A33001B6B37 /* photouploader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photouploader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		60A472E4133E7A33001B6B37 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		60A472EB133E7A33001B6B37 /* photouploader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "photouploader-Info.plist"; sourceTree = "<group>"; };
+		60A472ED133E7A33001B6B37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		60A472EF133E7A33001B6B37 /* photouploader-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "photouploader-Prefix.pch"; sourceTree = "<group>"; };
+		60A472F0133E7A33001B6B37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		60A472F4133E7A33001B6B37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		60A472F7133E7A33001B6B37 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
+		60A472F9133E7A33001B6B37 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+		60A47303133E7A8A001B6B37 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = SDKROOT; };
+		60A47305133E7AE1001B6B37 /* AppViewController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = AppViewController.rb; path = controllers/AppViewController.rb; sourceTree = "<group>"; };
+		60A47316133E8214001B6B37 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		60F74A3A133E896B002E1AD1 /* OverlayView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = OverlayView.rb; path = views/OverlayView.rb; sourceTree = "<group>"; };
+		60F74A45133E8AB9002E1AD1 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		60A472DD133E7A33001B6B37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60F74A46133E8AB9002E1AD1 /* Quartz.framework in Frameworks */,
+				60A47317133E8214001B6B37 /* QuartzCore.framework in Frameworks */,
+				60A47304133E7A8A001B6B37 /* MacRuby.framework in Frameworks */,
+				60A472E5133E7A33001B6B37 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		60A472D5133E7A32001B6B37 = {
+			isa = PBXGroup;
+			children = (
+				60F74A45133E8AB9002E1AD1 /* Quartz.framework */,
+				60A472E9133E7A33001B6B37 /* photouploader */,
+				60A472E3133E7A33001B6B37 /* Frameworks */,
+				60A472E1133E7A33001B6B37 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		60A472E1133E7A33001B6B37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60A472E0133E7A33001B6B37 /* photouploader.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		60A472E3133E7A33001B6B37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60A47316133E8214001B6B37 /* QuartzCore.framework */,
+				60A47303133E7A8A001B6B37 /* MacRuby.framework */,
+				60A472E4133E7A33001B6B37 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60A472E9133E7A33001B6B37 /* photouploader */ = {
+			isa = PBXGroup;
+			children = (
+				60A47307133E7B45001B6B37 /* Controllers */,
+				60A472F9133E7A33001B6B37 /* AppDelegate.rb */,
+				60A472F2133E7A33001B6B37 /* Resources */,
+				60A472F6133E7A33001B6B37 /* Other Sources */,
+				60A472EA133E7A33001B6B37 /* Supporting Files */,
+			);
+			path = photouploader;
+			sourceTree = "<group>";
+		};
+		60A472EA133E7A33001B6B37 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				60A472EB133E7A33001B6B37 /* photouploader-Info.plist */,
+				60A472EC133E7A33001B6B37 /* InfoPlist.strings */,
+				60A472EF133E7A33001B6B37 /* photouploader-Prefix.pch */,
+				60A472F0133E7A33001B6B37 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60A472F2133E7A33001B6B37 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				60A472F3133E7A33001B6B37 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		60A472F6133E7A33001B6B37 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				60A472F7133E7A33001B6B37 /* rb_main.rb */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		60A47307133E7B45001B6B37 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				60A47305133E7AE1001B6B37 /* AppViewController.rb */,
+				60F74A3A133E896B002E1AD1 /* OverlayView.rb */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		60A472E8133E7A33001B6B37 /* Deployment */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--compile --embed";
+			buildConfigurationList = 60A47300133E7A33001B6B37 /* Build configuration list for PBXLegacyTarget "Deployment" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/macruby_deploy;
+			dependencies = (
+			);
+			name = Deployment;
+			passBuildSettingsInEnvironment = 1;
+			productName = Deployment;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		60A472DF133E7A33001B6B37 /* photouploader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60A472FD133E7A33001B6B37 /* Build configuration list for PBXNativeTarget "photouploader" */;
+			buildPhases = (
+				60A472DC133E7A33001B6B37 /* Sources */,
+				60A472DD133E7A33001B6B37 /* Frameworks */,
+				60A472DE133E7A33001B6B37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = photouploader;
+			productName = photouploader;
+			productReference = 60A472E0133E7A33001B6B37 /* photouploader.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		60A472D7133E7A32001B6B37 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "http://www.ortatherox.com";
+			};
+			buildConfigurationList = 60A472DA133E7A32001B6B37 /* Build configuration list for PBXProject "photouploader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 60A472D5133E7A32001B6B37;
+			productRefGroup = 60A472E1133E7A33001B6B37 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				60A472DF133E7A33001B6B37 /* photouploader */,
+				60A472E8133E7A33001B6B37 /* Deployment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		60A472DE133E7A33001B6B37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60A472EE133E7A33001B6B37 /* InfoPlist.strings in Resources */,
+				60A472F5133E7A33001B6B37 /* MainMenu.xib in Resources */,
+				60A472F8133E7A33001B6B37 /* rb_main.rb in Resources */,
+				60A472FA133E7A33001B6B37 /* AppDelegate.rb in Resources */,
+				60A47306133E7AE1001B6B37 /* AppViewController.rb in Resources */,
+				60F74A3B133E896B002E1AD1 /* OverlayView.rb in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		60A472DC133E7A33001B6B37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60A472F1133E7A33001B6B37 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		60A472EC133E7A33001B6B37 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60A472ED133E7A33001B6B37 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		60A472F3133E7A33001B6B37 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60A472F4133E7A33001B6B37 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		60A472FB133E7A33001B6B37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		60A472FC133E7A33001B6B37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		60A472FE133E7A33001B6B37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "photouploader/photouploader-Prefix.pch";
+				INFOPLIST_FILE = "photouploader/photouploader-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		60A472FF133E7A33001B6B37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "photouploader/photouploader-Prefix.pch";
+				INFOPLIST_FILE = "photouploader/photouploader-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		60A47301133E7A33001B6B37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		60A47302133E7A33001B6B37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		60A472DA133E7A32001B6B37 /* Build configuration list for PBXProject "photouploader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60A472FB133E7A33001B6B37 /* Debug */,
+				60A472FC133E7A33001B6B37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60A472FD133E7A33001B6B37 /* Build configuration list for PBXNativeTarget "photouploader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60A472FE133E7A33001B6B37 /* Debug */,
+				60A472FF133E7A33001B6B37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60A47300133E7A33001B6B37 /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60A47301133E7A33001B6B37 /* Debug */,
+				60A47302133E7A33001B6B37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 60A472D7133E7A32001B6B37 /* Project object */;
+}
