@@ -7,18 +7,30 @@
 #
 
 class AppDelegate
-  attr_accessor :window
-  @images = []
+  attr_accessor :window, :imageView
   
   def application(sender, openFiles:files)
-    files.each do |file|
-      puts file
+    files.each do |file_path|
+      photo = Photo.new
+      photo.imageUID = file_path
+      photo.imageTitle = file_path
+      @images << photo
     end
+    imageView.reloadData
   end
   
+  #pragma --
+  
+  def numberOfItemsInImageBrowser(view)
+    @images.count
+  end
+  
+  def imageBrowser(view, itemAtIndex: index)
+    @images[index]
+  end
   
   def applicationDidFinishLaunching(a_notification)
-    # Insert code here to initialize your application
+    @images = NSMutableArray.array
   end
 end
 

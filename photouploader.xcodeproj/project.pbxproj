@@ -14,10 +14,9 @@
 		60A472F8133E7A33001B6B37 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 60A472F7133E7A33001B6B37 /* rb_main.rb */; };
 		60A472FA133E7A33001B6B37 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 60A472F9133E7A33001B6B37 /* AppDelegate.rb */; };
 		60A47304133E7A8A001B6B37 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A47303133E7A8A001B6B37 /* MacRuby.framework */; };
-		60A47306133E7AE1001B6B37 /* AppViewController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 60A47305133E7AE1001B6B37 /* AppViewController.rb */; };
 		60A47317133E8214001B6B37 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A47316133E8214001B6B37 /* QuartzCore.framework */; };
-		60F74A3B133E896B002E1AD1 /* OverlayView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 60F74A3A133E896B002E1AD1 /* OverlayView.rb */; };
 		60F74A46133E8AB9002E1AD1 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F74A45133E8AB9002E1AD1 /* Quartz.framework */; };
+		60F74A49133E8E06002E1AD1 /* Photo.rb in Resources */ = {isa = PBXBuildFile; fileRef = 60F74A48133E8E06002E1AD1 /* Photo.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,10 +30,9 @@
 		60A472F7133E7A33001B6B37 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		60A472F9133E7A33001B6B37 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
 		60A47303133E7A8A001B6B37 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = SDKROOT; };
-		60A47305133E7AE1001B6B37 /* AppViewController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = AppViewController.rb; path = controllers/AppViewController.rb; sourceTree = "<group>"; };
 		60A47316133E8214001B6B37 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		60F74A3A133E896B002E1AD1 /* OverlayView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = OverlayView.rb; path = views/OverlayView.rb; sourceTree = "<group>"; };
 		60F74A45133E8AB9002E1AD1 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		60F74A48133E8E06002E1AD1 /* Photo.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = Photo.rb; path = models/Photo.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +53,6 @@
 		60A472D5133E7A32001B6B37 = {
 			isa = PBXGroup;
 			children = (
-				60F74A45133E8AB9002E1AD1 /* Quartz.framework */,
 				60A472E9133E7A33001B6B37 /* photouploader */,
 				60A472E3133E7A33001B6B37 /* Frameworks */,
 				60A472E1133E7A33001B6B37 /* Products */,
@@ -73,6 +70,7 @@
 		60A472E3133E7A33001B6B37 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				60F74A45133E8AB9002E1AD1 /* Quartz.framework */,
 				60A47316133E8214001B6B37 /* QuartzCore.framework */,
 				60A47303133E7A8A001B6B37 /* MacRuby.framework */,
 				60A472E4133E7A33001B6B37 /* Cocoa.framework */,
@@ -83,6 +81,7 @@
 		60A472E9133E7A33001B6B37 /* photouploader */ = {
 			isa = PBXGroup;
 			children = (
+				60F74A47133E8DF4002E1AD1 /* Models */,
 				60A47307133E7B45001B6B37 /* Controllers */,
 				60A472F9133E7A33001B6B37 /* AppDelegate.rb */,
 				60A472F2133E7A33001B6B37 /* Resources */,
@@ -122,10 +121,16 @@
 		60A47307133E7B45001B6B37 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				60A47305133E7AE1001B6B37 /* AppViewController.rb */,
-				60F74A3A133E896B002E1AD1 /* OverlayView.rb */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		60F74A47133E8DF4002E1AD1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				60F74A48133E8E06002E1AD1 /* Photo.rb */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +204,7 @@
 				60A472F5133E7A33001B6B37 /* MainMenu.xib in Resources */,
 				60A472F8133E7A33001B6B37 /* rb_main.rb in Resources */,
 				60A472FA133E7A33001B6B37 /* AppDelegate.rb in Resources */,
-				60A47306133E7AE1001B6B37 /* AppViewController.rb in Resources */,
-				60F74A3B133E896B002E1AD1 /* OverlayView.rb in Resources */,
+				60F74A49133E8E06002E1AD1 /* Photo.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
