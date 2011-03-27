@@ -18,6 +18,7 @@ class PhotoController
   
   def add_files files
     files.each do |file_path|
+      break unless file_path.downcase.include? "jpg"
       photo = Photo.new
       photo.imageUID = file_path
       photo.imageTitle = file_path
@@ -44,12 +45,30 @@ class PhotoController
   def imageBrowserSelectionDidChange(browser)
     index = browser.selectionIndexes.firstIndex
     image = @images[index]   
-    url = NSURL.fileURLWithPath image.imageUID
-    imageView.setImageWithURL url
-    
-    if image.crop
-      imageView.selectionRect = image.crop
+
+    if image
+      url = NSURL.fileURLWithPath image.imageUID
+      imageView.setImageWithURL url
+      
+      if image.crop
+        imageView.selectionRect = image.crop
+      end
     end
+  end
+  
+  def draggingEntered(sender)
+    self.draggingUpdated sender
+  end
+  
+  def draggingUpdated(sender)
+    NSDragOperationCopy
+  end
+  
+  def performDragOperation(sender)
+    return if sender == imageBrowserView
+    
+    filenames = sender.draggingPasteboard.propertyListForType NSFilenamesPboardType
+    add_files filenames    
   end
   
   # stuff for IKImageView

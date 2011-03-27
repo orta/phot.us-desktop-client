@@ -1376,7 +1376,6 @@
 							<string key="NSFrame">{{819, 12}, {96, 32}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="736872077">
 								<int key="NSCellFlags">67239424</int>
@@ -1405,7 +1404,7 @@
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="541804875"/>
 									<bool key="NSViewIsLayerTreeHost">YES</bool>
-									<float key="zoomFactor">0.10562500357627869</float>
+									<float key="zoomFactor">0.19937500357627869</float>
 									<float key="rotationAngle">0.0</float>
 									<string key="currentToolMode">IKToolModeNone</string>
 									<bool key="autoresizes">YES</bool>
@@ -2353,6 +2352,14 @@
 						<reference key="destination" ref="541804875"/>
 					</object>
 					<int key="connectionID">581</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">dragDestinationDelegate</string>
+						<reference key="source" ref="541804875"/>
+						<reference key="destination" ref="381017891"/>
+					</object>
+					<int key="connectionID">582</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -3687,6 +3694,7 @@
 					<string>562.IBPluginDependency</string>
 					<string>563.IBPluginDependency</string>
 					<string>564.IBPluginDependency</string>
+					<string>569.IBPluginDependency</string>
 					<string>57.IBEditorWindowLastContentRect</string>
 					<string>57.IBPluginDependency</string>
 					<string>57.ImportedFromIB2</string>
@@ -3950,6 +3958,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.imagekit.ibplugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{286, 129}, {275, 183}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
@@ -3997,7 +4006,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">581</int>
+			<int key="maxID">582</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -4123,6 +4132,45 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">PhotoController</string>
 					<string key="superclassName">NSObject</string>
+					<object class="NSMutableDictionary" key="actions">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>draggingEntered:</string>
+							<string>draggingUpdated:</string>
+							<string>performDragOperation:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>draggingEntered:</string>
+							<string>draggingUpdated:</string>
+							<string>performDragOperation:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBActionInfo">
+								<string key="name">draggingEntered:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">draggingUpdated:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">performDragOperation:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+						</object>
+					</object>
 					<object class="NSMutableDictionary" key="outlets">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
