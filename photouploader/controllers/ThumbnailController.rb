@@ -19,24 +19,28 @@ class ThumbnailController
     
     thumbnail.lockFocus 
     NSGraphicsContext.currentContext.setImageInterpolation NSImageInterpolationHigh
-    
+    j = 0
     10.times do |i|
-  
+      
+      image = NSImage.alloc.initWithContentsOfFile(filenames[j].imageUID)
+      until image.size.width > image.size.height
+        j = [j+1, photos.count].min
+        image = NSImage.alloc.initWithContentsOfFile(filenames[j].imageUID)
+      end
+
+      j = [j+1, photos.count].min
       point = NSMakePoint(0, i * 146)
-      image = NSImage.alloc.initWithContentsOfFile(filenames[i].imageUID)
       image.setScalesWhenResized true
       image.setSize NSMakeSize(260, 146)
       image.compositeToPoint(point, operation:NSCompositeSourceOver)
-  
-  # thumbnail.drawInRect(NSMakeRect(, 0, 260, 146), fromRect: NSZeroRect, operation: NSCompositeCopy, fraction: 1.0)
     end
 
-  thumbnail.unlockFocus 
+    thumbnail.unlockFocus 
 
-  properties = NSDictionary.dictionaryWithObject( 0.3, forKey: NSImageCompressionFactor)
-  bitmap = NSBitmapImageRep.imageRepWithData thumbnail.TIFFRepresentation
-  jpg_data = bitmap.representationUsingType( NSJPEGFileType,  properties:properties )
-  jpg_data.writeToFile('/tmp/thumbnail.jpg', atomically:true)
-  "/tmp/thumbnail.jpg"
+    properties = NSDictionary.dictionaryWithObject( 0.3, forKey: NSImageCompressionFactor)
+    bitmap = NSBitmapImageRep.imageRepWithData thumbnail.TIFFRepresentation
+    jpg_data = bitmap.representationUsingType( NSJPEGFileType,  properties:properties )
+    jpg_data.writeToFile('/tmp/thumbnail.jpg', atomically:true)
+    "/tmp/thumbnail.jpg"
   end
 end
