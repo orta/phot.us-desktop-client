@@ -38,9 +38,6 @@
 		60A472F9133E7A33001B6B37 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
 		60A47303133E7A8A001B6B37 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = SDKROOT; };
 		60A47316133E8214001B6B37 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		60C678C9133EBB900081EE77 /* TestFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestFramework-Info.plist"; sourceTree = "<group>"; };
-		60C678CB133EBB900081EE77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		60C678CD133EBB900081EE77 /* TestFramework-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestFramework-Prefix.pch"; sourceTree = "<group>"; };
 		60F74A45133E8AB9002E1AD1 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		60F74A48133E8E06002E1AD1 /* Photo.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = Photo.rb; path = models/Photo.rb; sourceTree = "<group>"; };
 		60F74A4B133E9D49002E1AD1 /* PhotoController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = PhotoController.rb; path = controllers/PhotoController.rb; sourceTree = "<group>"; };
@@ -76,7 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				60A472E9133E7A33001B6B37 /* photouploader */,
-				60C678C7133EBB900081EE77 /* TestFramework */,
 				60A472E3133E7A33001B6B37 /* Frameworks */,
 				60A472E1133E7A33001B6B37 /* Products */,
 			);
@@ -151,24 +147,6 @@
 				6022E785133F6DAD00E372EC /* UploadController.rb */,
 			);
 			name = Controllers;
-			sourceTree = "<group>";
-		};
-		60C678C7133EBB900081EE77 /* TestFramework */ = {
-			isa = PBXGroup;
-			children = (
-				60C678C8133EBB900081EE77 /* Supporting Files */,
-			);
-			path = TestFramework;
-			sourceTree = "<group>";
-		};
-		60C678C8133EBB900081EE77 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				60C678C9133EBB900081EE77 /* TestFramework-Info.plist */,
-				60C678CA133EBB900081EE77 /* InfoPlist.strings */,
-				60C678CD133EBB900081EE77 /* TestFramework-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		60F74A47133E8DF4002E1AD1 /* Models */ = {
@@ -296,14 +274,6 @@
 				60A472F4133E7A33001B6B37 /* en */,
 			);
 			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-		60C678CA133EBB900081EE77 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				60C678CB133EBB900081EE77 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

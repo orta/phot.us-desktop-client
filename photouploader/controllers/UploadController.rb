@@ -8,14 +8,37 @@
 
 
 class UploadController
-  attr_accessor :photoController
-  
+  attr_accessor :photoController, :albumTitle, :albumDescription
+    
   def photos
     photoController.images
   end
 
-  def submit(sender)
-    puts "hi"
+  def test(sender)
+    server = NSUserDefaults.standardUserDefaults.stringForKey "server"
+    reply = open(server + "/clienttest").read
+    if reply == "yes"
+      puts "it's OK!"
+    end
   end
   
+  def submit(sender)
+    server = NSUserDefaults.standardUserDefaults.stringForKey "server"
+    if !albumTitle
+      puts "no title"
+    end
+    
+    if !albumDescription
+      puts "no description"
+    end
+    
+    if server
+      response = RestClient.post server + '/albums/new', :album => { :title => albumTitle, :description => albumDescription }
+      puts response.to_str
+    end
+  end
+  
+  def setAlbumDescription string
+    self.albumDescription = string
+  end
 end
