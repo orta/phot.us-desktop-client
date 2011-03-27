@@ -13,7 +13,9 @@ class PhotoController
     @images = NSMutableArray.array
     imageView.setDoubleClickOpensImageEditPanel false
     imageView.setCurrentToolMode IKToolModeCrop
-
+    
+    imageBrowserView.window.delegate = imageBrowserView
+    
     Dir.chdir "/Users/orta/Desktop/kayzia/"  
     
     add_files Dir.glob "*.jpg"
@@ -22,7 +24,6 @@ class PhotoController
   
   def add_files files
     files.each do |file_path|
-      puts file_path
       break unless file_path.downcase.include? "jpg"
       photo = Photo.new
       photo.imageUID = file_path

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6022E77C133F66F300E372EC /* ImageViewer.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6022E77B133F66F300E372EC /* ImageViewer.rb */; };
 		60A472E5133E7A33001B6B37 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A472E4133E7A33001B6B37 /* Cocoa.framework */; };
 		60A472EE133E7A33001B6B37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60A472EC133E7A33001B6B37 /* InfoPlist.strings */; };
 		60A472F1133E7A33001B6B37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A472F0133E7A33001B6B37 /* main.m */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6022E77B133F66F300E372EC /* ImageViewer.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = ImageViewer.rb; path = views/ImageViewer.rb; sourceTree = "<group>"; };
 		60A472E0133E7A33001B6B37 /* photouploader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photouploader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A472E4133E7A33001B6B37 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		60A472EB133E7A33001B6B37 /* photouploader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "photouploader-Info.plist"; sourceTree = "<group>"; };
@@ -58,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6022E77A133F66D800E372EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6022E77B133F66F300E372EC /* ImageViewer.rb */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		60A472D5133E7A32001B6B37 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +101,7 @@
 		60A472E9133E7A33001B6B37 /* photouploader */ = {
 			isa = PBXGroup;
 			children = (
+				6022E77A133F66D800E372EC /* Views */,
 				60F74A47133E8DF4002E1AD1 /* Models */,
 				60A47307133E7B45001B6B37 /* Controllers */,
 				60A472F9133E7A33001B6B37 /* AppDelegate.rb */,
@@ -245,6 +256,7 @@
 				60A472FA133E7A33001B6B37 /* AppDelegate.rb in Resources */,
 				60F74A49133E8E06002E1AD1 /* Photo.rb in Resources */,
 				60F74A4C133E9D49002E1AD1 /* PhotoController.rb in Resources */,
+				6022E77C133F66F300E372EC /* ImageViewer.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
