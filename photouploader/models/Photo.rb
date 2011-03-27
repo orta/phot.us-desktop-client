@@ -9,6 +9,10 @@
 class Photo
   attr_accessor :imageUID, :imageTitle, :crop
   
+  def filepath
+    imageUID
+  end
+  
   def imageRepresentation
       imageUID
   end

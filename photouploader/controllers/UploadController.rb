@@ -7,6 +7,7 @@
 #
 
 require 'ThumbnailController'
+require 'AlbumThumbnailController'
 
 class UploadController
   attr_accessor :photoController, :albumTitle, :albumDescription
@@ -25,8 +26,8 @@ class UploadController
   
   def submit(sender)
     
-    thumbnail_path = AlbumThumbnailController.generateWithPhotos self.photos
-    
+    # thumbnail_path = AlbumThumbnailController.generateWithPhotos self.photos
+    thumbnail_path = ThumbnailController.thumbnailForPhoto self.photos[1]
     return
     server = NSUserDefaults.standardUserDefaults.stringForKey "server"
     if !albumTitle

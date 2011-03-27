@@ -21,7 +21,7 @@ class AlbumThumbnailController
     NSGraphicsContext.currentContext.setImageInterpolation NSImageInterpolationHigh
     j = 0
     10.times do |i|
-      image = NSImage.alloc.initWithContentsOfFile(filenames[j].imageUID)
+      image = NSImage.alloc.initWithContentsOfFile(filenames[j].filepath)
       count = 0
       until image.size.width > image.size.height
         count = count + 1
