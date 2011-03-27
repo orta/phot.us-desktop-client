@@ -25,7 +25,7 @@ class UploadController
   
   def submit(sender)
     
-    ThumbnailController.generateWithPhotos self.photos
+    thumbnail_path = AlbumThumbnailController.generateWithPhotos self.photos
     
     return
     server = NSUserDefaults.standardUserDefaults.stringForKey "server"

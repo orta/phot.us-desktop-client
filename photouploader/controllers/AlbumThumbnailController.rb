@@ -11,7 +11,7 @@
 # and chopped vertically together ( 260 x 146 each )
 # this then needs uploading
 
-class ThumbnailController
+class AlbumThumbnailController
   
   def self.generateWithPhotos(photos)
     filenames = photos.shuffle
@@ -21,9 +21,13 @@ class ThumbnailController
     NSGraphicsContext.currentContext.setImageInterpolation NSImageInterpolationHigh
     j = 0
     10.times do |i|
-      
       image = NSImage.alloc.initWithContentsOfFile(filenames[j].imageUID)
+      count = 0
       until image.size.width > image.size.height
+        count = count + 1
+        if count == photos.count 
+          return;
+        end
         j = [j+1, photos.count].min
         image = NSImage.alloc.initWithContentsOfFile(filenames[j].imageUID)
       end
