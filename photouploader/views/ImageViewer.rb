@@ -11,6 +11,12 @@ framework 'Quartz'
 class ImageViewer < IKImageView
   attr_accessor :imageBrowser
 
+  def awakeFromNib
+    cool_image = NSImage.imageNamed "somethingcool"
+    self.image = cool_image
+    self.backgroundColor = NSColor.blackColor
+  end
+  
   #pass key events to the browser
   def keyDown(event)
     imageBrowser.keyDown event
