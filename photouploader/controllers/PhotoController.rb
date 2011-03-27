@@ -14,14 +14,19 @@ class PhotoController
     imageView.setDoubleClickOpensImageEditPanel false
     imageView.setCurrentToolMode IKToolModeCrop
 
+    Dir.chdir "/Users/orta/Desktop/kayzia/"  
+    
+    add_files Dir.glob "*.jpg"
+
  end
   
   def add_files files
     files.each do |file_path|
+      puts file_path
       break unless file_path.downcase.include? "jpg"
       photo = Photo.new
       photo.imageUID = file_path
-      photo.imageTitle = file_path
+      photo.imageTitle = File.basename(file_path)
       @images << photo
     end
     imageBrowserView.reloadData
@@ -77,5 +82,5 @@ class PhotoController
     index = imageBrowserView.selectionIndexes.firstIndex
     @images[index].crop = @imageView.selectionRect
   end
-
+  
 end
