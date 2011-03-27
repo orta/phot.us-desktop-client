@@ -6,6 +6,7 @@
 #  Copyright 2011 http://www.ortatherox.com. All rights reserved.
 #
 
+require 'ThumbnailController'
 
 class UploadController
   attr_accessor :photoController, :albumTitle, :albumDescription
@@ -23,6 +24,10 @@ class UploadController
   end
   
   def submit(sender)
+    
+    ThumbnailController.generateWithPhotos self.photos
+    
+    return
     server = NSUserDefaults.standardUserDefaults.stringForKey "server"
     if !albumTitle
       puts "no title"
@@ -33,12 +38,14 @@ class UploadController
     end
     
     if server
-      response = RestClient.post server + '/albums/new', :album => { :title => albumTitle, :description => albumDescription }
+      puts "sending stuff"
+      begin
+        response = RestClient.post server + '/albums/new', :album => { :title => albumTitle, :description => albumDescription }
+        rescue => e
+        puts e.response
+      end
+
       puts response.to_str
     end
-  end
-  
-  def setAlbumDescription string
-    self.albumDescription = string
   end
 end
