@@ -1,5 +1,5 @@
 Hello there
 
-instructions for buildings--
+This is a Macruby application for uploading files to my photo website
 
-  tests use shoulda, make sure to install this via macgem install shoulda
+no tests, seems that that's a ballache in xcode4
