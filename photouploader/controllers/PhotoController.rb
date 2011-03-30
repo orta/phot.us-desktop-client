@@ -28,7 +28,7 @@ class PhotoController
       photo = Photo.new
       photo.imageUID = file_path
       photo.imageTitle = File.basename(file_path)
-      @images << photo
+      images << photo
     end
     imageBrowserView.reloadData
   end
@@ -36,21 +36,21 @@ class PhotoController
   # IKImageBrowserView delegate bits
 
   def numberOfItemsInImageBrowser(view)
-    @images.count
+    images.count
   end
   
   def imageBrowser(view, itemAtIndex: index)
-    @images[index]
+    images[index]
   end
   
   def imageBrowser(aBrowser, removeItemsAtIndexes:indexes)
-    @images.removeObjectsAtIndexes indexes
+    images.removeObjectsAtIndexes indexes
     imageBrowserView.reloadData
   end  
   
   def imageBrowserSelectionDidChange(browser)
     index = browser.selectionIndexes.firstIndex
-    image = @images[index]   
+    image = images[index]   
 
     if image
       url = NSURL.fileURLWithPath image.imageUID
@@ -81,7 +81,6 @@ class PhotoController
   # this method is both private, and the selectionRect is too
   def selectionRectChanged(imageView)
     index = imageBrowserView.selectionIndexes.firstIndex
-    @images[index].crop = @imageView.selectionRect
+    images[index].crop = imageView.selectionRect
   end
-  
 end
