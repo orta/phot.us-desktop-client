@@ -13,7 +13,7 @@
 
 class AlbumThumbnailController
   
-  def self.generateWithPhotos(photos)
+  def self.generateWithPhotos(photos, name)
     filenames = photos.shuffle
     thumbnail = NSImage.alloc.initWithSize(NSMakeSize(260, 1460))
     
@@ -44,7 +44,7 @@ class AlbumThumbnailController
     properties = NSDictionary.dictionaryWithObject( 0.3, forKey: NSImageCompressionFactor)
     bitmap = NSBitmapImageRep.imageRepWithData thumbnail.TIFFRepresentation
     jpg_data = bitmap.representationUsingType( NSJPEGFileType,  properties:properties )
-    jpg_data.writeToFile('/tmp/thumbnail.jpg', atomically:true)
-    "/tmp/thumbnail.jpg"
+    jpg_data.writeToFile("/tmp/#{name}.jpg", atomically:true)
+    "/tmp/#{name}.jpg"
   end
 end

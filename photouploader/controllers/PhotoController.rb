@@ -17,7 +17,6 @@ class PhotoController
     imageBrowserView.window.delegate = imageBrowserView
     
     Dir.chdir "/Users/orta/Desktop/kayzia/"  
-    
     add_files Dir.glob "*.jpg"
 
  end
