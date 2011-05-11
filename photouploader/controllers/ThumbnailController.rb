@@ -9,24 +9,22 @@
 
 class ThumbnailController
   
-  def self.thumbnailForPhoto photo
-    size = 256
-
+  def self.thumbnailForPhoto photo, name, width, height
     image = NSImage.alloc.initWithContentsOfFile(photo.filepath)
-    scaledImage = NSImage.alloc.initWithSize(NSMakeSize(size, size))
+    scaledImage = NSImage.alloc.initWithSize(NSMakeSize(width, height))
     scaledImage.lockFocus
     NSGraphicsContext.currentContext.setImageInterpolation NSImageInterpolationHigh
     if photo.crop
-      image.drawInRect(NSMakeRect(0, 0, size, size), fromRect: photo.crop, operation: NSCompositeCopy, fraction: 1.0)
+      image.drawInRect(NSMakeRect(0, 0, width, height), fromRect: photo.crop, operation: NSCompositeCopy, fraction: 1.0)
     else
-      image.drawInRect(NSMakeRect(0, 0, size, size), fromRect: NSZeroRect, operation: NSCompositeCopy, fraction: 1.0)
+      image.drawInRect(NSMakeRect(0, 0, width, height), fromRect: NSZeroRect, operation: NSCompositeCopy, fraction: 1.0)
     end
     scaledImage.unlockFocus
     
     properties = NSDictionary.dictionaryWithObject( 0.7, forKey: NSImageCompressionFactor)
     bitmap = NSBitmapImageRep.imageRepWithData scaledImage.TIFFRepresentation
     jpg_data = bitmap.representationUsingType( NSJPEGFileType,  properties:properties )
-    jpg_data.writeToFile('/tmp/thumbnail.jpg', atomically:true)
-    "/tmp/thumbnail.jpg"
+    jpg_data.writeToFile("/tmp/#{name}.jpg", atomically:true)
+    "/tmp/#{name}.jpg"
   end
 end

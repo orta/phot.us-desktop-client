@@ -44,7 +44,7 @@ class AlbumThumbnailController
     properties = NSDictionary.dictionaryWithObject( 0.3, forKey: NSImageCompressionFactor)
     bitmap = NSBitmapImageRep.imageRepWithData thumbnail.TIFFRepresentation
     jpg_data = bitmap.representationUsingType( NSJPEGFileType,  properties:properties )
-    jpg_data.writeToFile("/tmp/#{name}.jpg", atomically:true)
-    "/tmp/#{name}.jpg"
+    jpg_data.writeToFile("/tmp/#{name}_thumbnail.jpg", atomically:true)
+    "/tmp/#{name}_thumbnail.jpg"
   end
 end

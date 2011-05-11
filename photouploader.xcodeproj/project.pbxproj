@@ -10,6 +10,7 @@
 		6022E77C133F66F300E372EC /* ImageViewer.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6022E77B133F66F300E372EC /* ImageViewer.rb */; };
 		6022E786133F6DAD00E372EC /* UploadController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6022E785133F6DAD00E372EC /* UploadController.rb */; };
 		6022E791133F70D000E372EC /* somethingcool.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6022E790133F70D000E372EC /* somethingcool.jpg */; };
+		605F8331137B36C400DCDEB4 /* Uploader.rb in Resources */ = {isa = PBXBuildFile; fileRef = 605F8330137B36C400DCDEB4 /* Uploader.rb */; };
 		60A472E5133E7A33001B6B37 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A472E4133E7A33001B6B37 /* Cocoa.framework */; };
 		60A472EE133E7A33001B6B37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60A472EC133E7A33001B6B37 /* InfoPlist.strings */; };
 		60A472F1133E7A33001B6B37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A472F0133E7A33001B6B37 /* main.m */; };
@@ -29,6 +30,7 @@
 		6022E77B133F66F300E372EC /* ImageViewer.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = ImageViewer.rb; path = views/ImageViewer.rb; sourceTree = "<group>"; };
 		6022E785133F6DAD00E372EC /* UploadController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = UploadController.rb; path = controllers/UploadController.rb; sourceTree = "<group>"; };
 		6022E790133F70D000E372EC /* somethingcool.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = somethingcool.jpg; sourceTree = "<group>"; };
+		605F8330137B36C400DCDEB4 /* Uploader.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = Uploader.rb; path = models/Uploader.rb; sourceTree = "<group>"; };
 		60A472E0133E7A33001B6B37 /* photouploader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photouploader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A472E4133E7A33001B6B37 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		60A472EB133E7A33001B6B37 /* photouploader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "photouploader-Info.plist"; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				60F74A48133E8E06002E1AD1 /* Photo.rb */,
+				605F8330137B36C400DCDEB4 /* Uploader.rb */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				6022E791133F70D000E372EC /* somethingcool.jpg in Resources */,
 				60F5CC42133FD9F800988F11 /* AlbumThumbnailController.rb in Resources */,
 				60F5CC45133FEF2000988F11 /* ThumbnailController.rb in Resources */,
+				605F8331137B36C400DCDEB4 /* Uploader.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
