@@ -8,10 +8,7 @@
 
 class AppDelegate
   attr_accessor :window, :photoController
-  
-  def applicationDidFinishLaunching(a_notification)
-  end
-  
+    
   def application(sender, openFiles:files)
     photoController.add_files files
   end
