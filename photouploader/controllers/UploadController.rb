@@ -59,22 +59,21 @@ class UploadController
     if( options[:width] )
       output_url = "/tmp/#{new_photo_path}"
       `sips -s format jpeg #{photo_url} --resampleWidth 1024 --out #{output_url}`
-
-      output_url
     end
   end
 
   def uploadPhotosWithID album_id
     server = NSUserDefaults.standardUserDefaults.stringForKey "server"
-
+    count = self.photos.size
+    
     self.photos.each_with_index do |photo, i|
 
       image = NSImage.alloc.initWithContentsOfFile(photo.filepath)
       is_landscape = image.size.width > image.size.height ? true : false
 
       photo_name = "#{safe_name}_photo_1024_#{i}.jpg"
-      thumbnail_path = scale_photo photo.filepath, photo_name, {:width => 1024}
-      thumb_1024_url = Uploader.toS3 thumbnail_path, photo_name
+      scale_photo photo.filepath, photo_name, {:width => 1024}
+      thumb_1024_url = Uploader.toS3 "/tmp/#{photo_name}", photo_name
 
       photo_name = "#{safe_name}_photo_320_#{i}.jpg"
       thumbnail_path = ThumbnailController.thumbnailForPhoto photo, photo_name, 320, 320
@@ -97,7 +96,7 @@ class UploadController
       },{:accept => :json})      
 
       #only one for now PLZ
-      return
+      puts "done #{i} / #{count}"
     end
   end
 end
