@@ -12,6 +12,7 @@ class ThumbnailController
   def self.thumbnailForPhoto photo, name, width, height
     image = NSImage.alloc.initWithContentsOfFile(photo.filepath)    
     scaledImage = NSImage.alloc.initWithSize(NSMakeSize(width, height))
+    
     scaledImage.lockFocus
     NSGraphicsContext.currentContext.setImageInterpolation NSImageInterpolationHigh
     if photo.crop

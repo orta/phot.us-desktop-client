@@ -31,10 +31,33 @@ class ImageViewer < IKImageView
   def mouseUp(event)
     super_mouseUp event
     rect = self.selectionRect
+    image = NSImage.alloc.initWithCGImage( self.image, size: self.imageSize) 
+    
+    #make square
     if rect.size.width > rect.size.height
       rect.size.height = rect.size.width
     else
       rect.size.width = rect.size.height
+    end
+    
+    #make max size
+    if rect.size.width > image.size.width
+      rect.size.width = image.size.width
+    end
+
+    if rect.size.height > image.size.height
+      rect.size.height = image.size.height
+    end
+
+    #make sure the right edge is in
+    right_x = rect.origin.x + rect.size.width
+    if right_x > image.size.width
+      rect.origin.x = image.size.width- rect.size.width
+    end
+
+    bottom_x = rect.origin.y + rect.size.height
+    if bottom_x > image.size.height
+      rect.origin.y = image.size.height - rect.size.height
     end
     
     rect.origin.x = [rect.origin.x, 0].max 

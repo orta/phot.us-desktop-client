@@ -70,19 +70,22 @@ class UploadController
 
       image = NSImage.alloc.initWithContentsOfFile(photo.filepath)
       is_landscape = image.size.width > image.size.height ? true : false
-
+      
       photo_name = "#{safe_name}_photo_1024_#{i}.jpg"
       scale_photo photo.filepath, photo_name, {:width => 1024}
       thumb_1024_url = Uploader.toS3 "/tmp/#{photo_name}", photo_name
-
-      photo_name = "#{safe_name}_photo_320_#{i}.jpg"
-      thumbnail_path = ThumbnailController.thumbnailForPhoto photo, photo_name, 320, 320
-      thumb_320_url = Uploader.toS3 thumbnail_path, photo_name
-
-      photo_name = "#{safe_name}_photo_32_#{i}.jpg"
-      thumbnail_path = ThumbnailController.thumbnailForPhoto photo, photo_name, 32, 32
-      thumb_32_url = Uploader.toS3 thumbnail_path, photo_name
-
+      
+      is_cropped = photo.crop ? true : false
+      if is_cropped
+        photo_name = "#{safe_name}_photo_320_#{i}.jpg"
+        thumbnail_path = ThumbnailController.thumbnailForPhoto photo, photo_name, 320, 320
+        thumb_320_url = Uploader.toS3 thumbnail_path, photo_name
+        
+        photo_name = "#{safe_name}_photo_32_#{i}.jpg"
+        thumbnail_path = ThumbnailController.thumbnailForPhoto photo, photo_name, 32, 32
+        thumb_32_url = Uploader.toS3 thumbnail_path, photo_name
+      end
+      
       RestClient.post( "#{server}/albums/#{album_id}/photos", 
       { :photo => {  
 
@@ -90,6 +93,7 @@ class UploadController
         :thumbnail_320_url => thumb_320_url, 
         :thumbnail_1024_url => thumb_1024_url, 
         :is_landscape => is_landscape,
+        :is_cropped => is_cropped,
         :album_id => album_id,
       } 
 
