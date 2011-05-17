@@ -11,6 +11,7 @@
 		6022E786133F6DAD00E372EC /* UploadController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6022E785133F6DAD00E372EC /* UploadController.rb */; };
 		6022E791133F70D000E372EC /* somethingcool.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6022E790133F70D000E372EC /* somethingcool.jpg */; };
 		605F8331137B36C400DCDEB4 /* Uploader.rb in Resources */ = {isa = PBXBuildFile; fileRef = 605F8330137B36C400DCDEB4 /* Uploader.rb */; };
+		60749B421381B9F900032ECF /* FacebookController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 60749B411381B9F900032ECF /* FacebookController.rb */; };
 		60A472E5133E7A33001B6B37 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A472E4133E7A33001B6B37 /* Cocoa.framework */; };
 		60A472EE133E7A33001B6B37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60A472EC133E7A33001B6B37 /* InfoPlist.strings */; };
 		60A472F1133E7A33001B6B37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A472F0133E7A33001B6B37 /* main.m */; };
@@ -19,6 +20,9 @@
 		60A472FA133E7A33001B6B37 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 60A472F9133E7A33001B6B37 /* AppDelegate.rb */; };
 		60A47304133E7A8A001B6B37 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A47303133E7A8A001B6B37 /* MacRuby.framework */; };
 		60A47317133E8214001B6B37 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A47316133E8214001B6B37 /* QuartzCore.framework */; };
+		60DF339013830CFD008F1C52 /* MacRuby.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 60A47303133E7A8A001B6B37 /* MacRuby.framework */; };
+		60DF339B13831646008F1C52 /* MKAbeFook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DF339A13831646008F1C52 /* MKAbeFook.framework */; };
+		60DF339C13831649008F1C52 /* MKAbeFook.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 60DF339A13831646008F1C52 /* MKAbeFook.framework */; };
 		60F5CC42133FD9F800988F11 /* AlbumThumbnailController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 60F5CC41133FD9F800988F11 /* AlbumThumbnailController.rb */; };
 		60F5CC45133FEF2000988F11 /* ThumbnailController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 60F5CC44133FEF2000988F11 /* ThumbnailController.rb */; };
 		60F74A46133E8AB9002E1AD1 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F74A45133E8AB9002E1AD1 /* Quartz.framework */; };
@@ -26,11 +30,27 @@
 		60F74A4C133E9D49002E1AD1 /* PhotoController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 60F74A4B133E9D49002E1AD1 /* PhotoController.rb */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		60749B3F1381B85B00032ECF /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				60DF339013830CFD008F1C52 /* MacRuby.framework in Copy Files */,
+				60DF339C13831649008F1C52 /* MKAbeFook.framework in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		6022E77B133F66F300E372EC /* ImageViewer.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = ImageViewer.rb; path = views/ImageViewer.rb; sourceTree = "<group>"; };
 		6022E785133F6DAD00E372EC /* UploadController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = UploadController.rb; path = controllers/UploadController.rb; sourceTree = "<group>"; };
 		6022E790133F70D000E372EC /* somethingcool.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = somethingcool.jpg; sourceTree = "<group>"; };
 		605F8330137B36C400DCDEB4 /* Uploader.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = Uploader.rb; path = models/Uploader.rb; sourceTree = "<group>"; };
+		60749B411381B9F900032ECF /* FacebookController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = FacebookController.rb; path = controllers/FacebookController.rb; sourceTree = "<group>"; };
 		60A472E0133E7A33001B6B37 /* photouploader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photouploader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A472E4133E7A33001B6B37 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		60A472EB133E7A33001B6B37 /* photouploader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "photouploader-Info.plist"; sourceTree = "<group>"; };
@@ -42,6 +62,7 @@
 		60A472F9133E7A33001B6B37 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
 		60A47303133E7A8A001B6B37 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = SDKROOT; };
 		60A47316133E8214001B6B37 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		60DF339A13831646008F1C52 /* MKAbeFook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MKAbeFook.framework; sourceTree = "<group>"; };
 		60F5CC41133FD9F800988F11 /* AlbumThumbnailController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = AlbumThumbnailController.rb; path = controllers/AlbumThumbnailController.rb; sourceTree = "<group>"; };
 		60F5CC44133FEF2000988F11 /* ThumbnailController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = ThumbnailController.rb; path = controllers/ThumbnailController.rb; sourceTree = "<group>"; };
 		60F74A45133E8AB9002E1AD1 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
@@ -61,6 +82,7 @@
 				60A47317133E8214001B6B37 /* QuartzCore.framework in Frameworks */,
 				60A47304133E7A8A001B6B37 /* MacRuby.framework in Frameworks */,
 				60A472E5133E7A33001B6B37 /* Cocoa.framework in Frameworks */,
+				60DF339B13831646008F1C52 /* MKAbeFook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +117,7 @@
 		60A472E3133E7A33001B6B37 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				60DF339A13831646008F1C52 /* MKAbeFook.framework */,
 				60F74A45133E8AB9002E1AD1 /* Quartz.framework */,
 				60A47316133E8214001B6B37 /* QuartzCore.framework */,
 				60A47303133E7A8A001B6B37 /* MacRuby.framework */,
@@ -153,6 +176,7 @@
 				6022E785133F6DAD00E372EC /* UploadController.rb */,
 				60F5CC41133FD9F800988F11 /* AlbumThumbnailController.rb */,
 				60F5CC44133FEF2000988F11 /* ThumbnailController.rb */,
+				60749B411381B9F900032ECF /* FacebookController.rb */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -202,6 +226,7 @@
 				60A472DC133E7A33001B6B37 /* Sources */,
 				60A472DD133E7A33001B6B37 /* Frameworks */,
 				60A472DE133E7A33001B6B37 /* Resources */,
+				60749B3F1381B85B00032ECF /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -255,6 +280,7 @@
 				60F5CC42133FD9F800988F11 /* AlbumThumbnailController.rb in Resources */,
 				60F5CC45133FEF2000988F11 /* ThumbnailController.rb in Resources */,
 				605F8331137B36C400DCDEB4 /* Uploader.rb in Resources */,
+				60749B421381B9F900032ECF /* FacebookController.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +356,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_ENABLE_OBJC_GC = required;
@@ -347,6 +377,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_ENABLE_OBJC_GC = required;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
