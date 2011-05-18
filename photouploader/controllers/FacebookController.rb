@@ -12,12 +12,12 @@ require "rexml/document"
 include REXML
 
 class FacebookController
-
+  attr_accessor :uploadController
+  
   def awakeFromNib
     self.connect self
   end
-  
-  
+        
   def connect(sender)
     @fbConnection = MKFacebook.facebookWithAppID "218224341540328", delegate: self
     @fbConnection.loginWithPermissions ["offline_access", "photo_upload"], forSheet: false
@@ -28,8 +28,8 @@ class FacebookController
     puts "connected to facebook"
   end
   
-  def makeAlbum name, description
-    params = { :uid => @fbConnection.uid, :name => name, :description => description, :visible => "everyone" }
+  def makeAlbum name, description, location
+    params = { :uid => @fbConnection.uid, :name => name, :description => description, :location => location, :visible => "everyone" }
     mk_request = MKFacebookRequest.requestWithDelegate:self
     mk_request.method = "photos.createAlbum"
     mk_request.parameters = params
@@ -50,14 +50,16 @@ class FacebookController
     doc = Document.new xmlresponse
     
     if request.method == "photos.createAlbum"
+      puts doc.root.elements["link"].texts[0]
       #it comes through as a weird XML object
       @album_id = "#{ doc.root.elements["aid"].texts[0]}"
-      postPhoto "See original here: xxx", "/tmp/xzczxczxczcx_photo_1024_0.jpg"
+      
+      uploadController.next_photo
     end
     
     if request.method == "photos.upload"
       puts "put up a photo"
-      
+     # uploadController.next_photo      
     end
   
   end  

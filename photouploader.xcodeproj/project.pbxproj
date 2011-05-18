@@ -12,6 +12,7 @@
 		6022E791133F70D000E372EC /* somethingcool.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6022E790133F70D000E372EC /* somethingcool.jpg */; };
 		605F8331137B36C400DCDEB4 /* Uploader.rb in Resources */ = {isa = PBXBuildFile; fileRef = 605F8330137B36C400DCDEB4 /* Uploader.rb */; };
 		60749B421381B9F900032ECF /* FacebookController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 60749B411381B9F900032ECF /* FacebookController.rb */; };
+		6093471613843C75008FAF8E /* SheetController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6093471513843C75008FAF8E /* SheetController.rb */; };
 		60A472E5133E7A33001B6B37 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A472E4133E7A33001B6B37 /* Cocoa.framework */; };
 		60A472EE133E7A33001B6B37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60A472EC133E7A33001B6B37 /* InfoPlist.strings */; };
 		60A472F1133E7A33001B6B37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A472F0133E7A33001B6B37 /* main.m */; };
@@ -51,6 +52,7 @@
 		6022E790133F70D000E372EC /* somethingcool.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = somethingcool.jpg; sourceTree = "<group>"; };
 		605F8330137B36C400DCDEB4 /* Uploader.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = Uploader.rb; path = models/Uploader.rb; sourceTree = "<group>"; };
 		60749B411381B9F900032ECF /* FacebookController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = FacebookController.rb; path = controllers/FacebookController.rb; sourceTree = "<group>"; };
+		6093471513843C75008FAF8E /* SheetController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = SheetController.rb; path = controllers/SheetController.rb; sourceTree = "<group>"; };
 		60A472E0133E7A33001B6B37 /* photouploader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photouploader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A472E4133E7A33001B6B37 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		60A472EB133E7A33001B6B37 /* photouploader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "photouploader-Info.plist"; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				60F5CC41133FD9F800988F11 /* AlbumThumbnailController.rb */,
 				60F5CC44133FEF2000988F11 /* ThumbnailController.rb */,
 				60749B411381B9F900032ECF /* FacebookController.rb */,
+				6093471513843C75008FAF8E /* SheetController.rb */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -205,11 +208,12 @@
 /* Begin PBXLegacyTarget section */
 		60A472E8133E7A33001B6B37 /* Deployment */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "--compile --embed";
+			buildArgumentsString = "--compile --embed --gem rest-client --gem aws-s3 --gem libxml-ruby";
 			buildConfigurationList = 60A47300133E7A33001B6B37 /* Build configuration list for PBXLegacyTarget "Deployment" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/local/bin/macruby_deploy;
+			buildWorkingDirectory = "";
 			dependencies = (
 			);
 			name = Deployment;
@@ -281,6 +285,7 @@
 				60F5CC45133FEF2000988F11 /* ThumbnailController.rb in Resources */,
 				605F8331137B36C400DCDEB4 /* Uploader.rb in Resources */,
 				60749B421381B9F900032ECF /* FacebookController.rb in Resources */,
+				6093471613843C75008FAF8E /* SheetController.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
