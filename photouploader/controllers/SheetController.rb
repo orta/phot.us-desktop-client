@@ -9,21 +9,29 @@
 
 class SheetController
   
-  attr_accessor :mainWindow, :sheet, :uploadController
+  attr_accessor :mainWindow, :sheet, :uploadController, :current_photo, :message, :photo_index, :photo_count, :enabled
   
   def open_sheet(sender)
+    setup_defaults
     NSApp.beginSheet sheet, modalForWindow: mainWindow, modalDelegate: self, didEndSelector: nil, contextInfo: nil
-
+    enabled = true
   end
   
   def cancel_sheet(sender)
     NSApp.endSheet sheet
     sheet.orderOut self
-
   end
   
-  def sheet_did_end
-    puts "uh?" 
+  
+  private
+  
+  def setup_defaults
+    self.photo_count = uploadController.photos.count
+    
+    image = NSImage.alloc.initWithContentsOfFile(uploadController.photos.first.filepath)
+    self.current_photo = image
+    self.photo_index = 0
   end
+  
   
 end

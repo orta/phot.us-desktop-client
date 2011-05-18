@@ -8,8 +8,6 @@
 
 class Uploader
   def self.toS3 file_path, filename
-    puts file_path
-    puts filename
     file = File.new(file_path, 'rb')
     s3_access_key = NSUserDefaults.standardUserDefaults.stringForKey "access_key_id"
     s3_secret_access_key = NSUserDefaults.standardUserDefaults.stringForKey "secret_access_key"

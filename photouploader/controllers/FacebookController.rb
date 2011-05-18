@@ -24,21 +24,33 @@ class FacebookController
   end  
   
   def userLoginSuccessful
-    # self.makeAlbum "test album", "ignore me's"
     puts "connected to facebook"
   end
   
-  def makeAlbum name, description, location
+  def makeAlbum name, description, location    
+    unless make_facebook?
+      puts "skipping facebook album"
+      uploadController.next_photo
+      return
+    end
+    
     params = { :uid => @fbConnection.uid, :name => name, :description => description, :location => location, :visible => "everyone" }
     mk_request = MKFacebookRequest.requestWithDelegate:self
     mk_request.method = "photos.createAlbum"
     mk_request.parameters = params
     mk_request.delegate = self
     mk_request.sendRequest
+    log "making facebook album #{ name }"
   end
   
   
   def postPhoto( name, photo_filepath )
+    unless make_facebook?
+      puts "skipping facebook photo"
+      uploadController.next_photo
+      return
+    end
+    
     photo_request = MKPhotosRequest.requestWithDelegate self
     image = NSImage.alloc.initWithContentsOfFile photo_filepath 
     
@@ -59,10 +71,12 @@ class FacebookController
     
     if request.method == "photos.upload"
       puts "put up a photo"
-     # uploadController.next_photo      
+      uploadController.next_photo      
     end
   
   end  
+  
+  private
   
   def facebookRequest request, errorReceived: error
     puts "DED"
@@ -70,5 +84,9 @@ class FacebookController
   
   def facebookRequest request, failed: error
     puts "DEDED"
+  end
+  
+  def make_facebook?
+    NSUserDefaults.standardUserDefaults.boolForKey "make_facebook"
   end
 end

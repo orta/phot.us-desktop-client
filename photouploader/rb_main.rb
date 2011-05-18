@@ -12,7 +12,7 @@ framework 'Cocoa'
 
 require 'rubygems'
 require 'rest_client'
-#require 'aws/s3'
+require 'aws/s3'
 require 'json'
 
 # Loading all the Ruby project files.
