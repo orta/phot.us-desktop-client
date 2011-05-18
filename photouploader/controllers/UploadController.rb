@@ -22,6 +22,9 @@ class UploadController
 
   def submit(sender)
     sheetController.enabled = false
+    @album_id = nil
+    @stopEverything = nil
+    
     performSelectorInBackground :'start_uploading:', withObject:nil
   end
   
@@ -60,8 +63,8 @@ class UploadController
   end
   
   def next_photo
-    puts "next photo"
-
+    return if @stopEverything
+    
     photo = photos.shift
     @i = @i + 1
     sheetController.photo_index = @i
@@ -109,6 +112,9 @@ class UploadController
     end     
   end
   
+  def stopEverything!
+    @stopEverything = true
+  end
 
   private
   def scale_photo(photo_url, new_photo_path, options={} )

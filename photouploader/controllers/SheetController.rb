@@ -14,7 +14,7 @@ class SheetController
   def open_sheet(sender)
     setup_defaults
     NSApp.beginSheet sheet, modalForWindow: mainWindow, modalDelegate: self, didEndSelector: nil, contextInfo: nil
-    enabled = true
+    self.enabled = true
   end
   
   def cancel_sheet(sender)
