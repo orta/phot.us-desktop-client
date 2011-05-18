@@ -18,6 +18,8 @@ class SheetController
   end
   
   def cancel_sheet(sender)
+    uploadController.stopEverything!
+    
     NSApp.endSheet sheet
     sheet.orderOut self
   end
