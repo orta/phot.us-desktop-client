@@ -62,7 +62,7 @@ class UploadController
     end
   end
   
-  def next_photo
+  def next_photo please
     return if @stopEverything
     
     photo = photos.shift
@@ -77,7 +77,7 @@ class UploadController
     photo_1024_name = "#{safe_name}_photo_1024_#{ @i }.jpg"
     scale_photo photo.filepath, photo_1024_name, {:width => 1024}
     thumb_1024_url = Uploader.toS3 "/tmp/#{photo_1024_name}", photo_1024_name
-    log "uploaded 1024"
+    log "#{ @i }: uploaded 1024"
 
     
     is_cropped = photo.crop ? true : false
@@ -85,13 +85,13 @@ class UploadController
       photo_name = "#{safe_name}_photo_320_#{ @i }.jpg"
       thumbnail_path = ThumbnailController.thumbnailForPhoto photo, photo_name, 320, 320
       thumb_320_url = Uploader.toS3 thumbnail_path, photo_name
-      log "uploaded 320"
+      log "#{ @i }: uploaded 320"
 
       
       photo_name = "#{safe_name}_photo_32_#{ @i }.jpg"
       thumbnail_path = ThumbnailController.thumbnailForPhoto photo, photo_name, 32, 32
       thumb_32_url = Uploader.toS3 thumbnail_path, photo_name
-      log "uploaded 32"
+      log "#{ @i }: uploaded 32"
 
     end
     
@@ -107,7 +107,7 @@ class UploadController
     } 
 
     },{:accept => :json})  do  |response, request, result| 
-      log "added another photo to the server "
+      log "#{ @i }: added another photo to the server "
       facebookController.postPhoto "See original here: #{ @server }/albums/#{@album_id} ", "/tmp/#{photo_1024_name}"
     end     
   end

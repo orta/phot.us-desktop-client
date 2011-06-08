@@ -26,11 +26,11 @@ class FacebookController
   def userLoginSuccessful
     puts "connected to facebook"
   end
-  
+    
   def makeAlbum name, description, location    
     unless make_facebook?
       puts "skipping facebook album"
-      uploadController.next_photo
+      continue
       return
     end
     
@@ -47,7 +47,7 @@ class FacebookController
   def postPhoto( name, photo_filepath )
     unless make_facebook?
       puts "skipping facebook photo"
-      uploadController.next_photo
+      continue
       return
     end
     
@@ -65,15 +65,13 @@ class FacebookController
       puts doc.root.elements["link"].texts[0]
       #it comes through as a weird XML object
       @album_id = "#{ doc.root.elements["aid"].texts[0]}"
-      
-      uploadController.next_photo
     end
     
     if request.method == "photos.upload"
       puts "put up a photo"
-      uploadController.next_photo      
     end
-  
+    
+    continue
   end  
   
   private
@@ -89,4 +87,9 @@ class FacebookController
   def make_facebook?
     NSUserDefaults.standardUserDefaults.boolForKey "make_facebook"
   end
+  
+  def continue
+    uploadController.performSelectorInBackground :'next_photo:', withObject:nil
+  end
+
 end
