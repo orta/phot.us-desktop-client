@@ -66,7 +66,7 @@ class PhotoController
       imageView.setImageWithURL url
       
       if image.crop
-        imageView.selectionRect = image.crop
+        imageView.selectionRect = NSRectFromString( image.crop )
       end
     end
   end
@@ -89,7 +89,9 @@ class PhotoController
   # stuff for IKImageView
   # this method is both private, and the selectionRect is too
   def selectionRectChanged(imageView)
-    index = imageBrowserView.selectionIndexes.firstIndex
-    images[index].crop = imageView.selectionRect
+    if imageBrowserView.selectionIndexes.count == 1
+      index = imageBrowserView.selectionIndexes.firstIndex
+      images[index].crop = NSStringFromRect( imageView.selectionRect )
+    end
   end
 end

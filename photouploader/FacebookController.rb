@@ -12,7 +12,7 @@ require "rexml/document"
 include REXML
 
 class FacebookController
-  attr_accessor :uploadController
+  attr_accessor :uploadController, :connected
   
   def awakeFromNib
     self.connect self
@@ -25,6 +25,7 @@ class FacebookController
   
   def userLoginSuccessful
     puts "connected to facebook"
+    @connected = true
   end
     
   def makeAlbum name, description, location    

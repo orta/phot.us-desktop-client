@@ -15,7 +15,7 @@ require 'rest_client'
 require 'json'
 require 'yaml'
 
-#require 'aws/s3'
+require 'aws/s3'
 
 
 # Loading all the Ruby project files.

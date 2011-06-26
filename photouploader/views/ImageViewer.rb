@@ -31,6 +31,7 @@ class ImageViewer < IKImageView
   def mouseUp(event)
     super_mouseUp event
     rect = self.selectionRect
+    
     image = NSImage.alloc.initWithCGImage( self.image, size: self.imageSize) 
     
     #make square
