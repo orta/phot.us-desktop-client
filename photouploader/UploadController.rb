@@ -10,7 +10,7 @@ require 'ThumbnailController'
 require 'AlbumThumbnailController'
 
 class UploadController
-  attr_accessor :photoController, :albumTitle, :albumDescription, :albumLocation, :facebookController, :sheetController
+  attr_accessor :photoController, :albumTitle, :albumDescription, :albumLocation, :facebookController, :sheetController, :enabled
 
   def photos
     photoController.images

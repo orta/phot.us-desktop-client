@@ -1,9 +1,9 @@
 #
-#  rb_main.rb
-#  photouploader
+# rb_main.rb
+# phot.us_uploader
 #
-#  Created by orta on 26/03/2011.
-#  Copyright (c) 2011 http://www.ortatherox.com. All rights reserved.
+# Created by orta on 08/06/2011.
+# Copyright __MyCompanyName__ 2011. All rights reserved.
 #
 
 # Loading the Cocoa framework. If you need to load more frameworks, you can
@@ -13,18 +13,17 @@ framework 'Cocoa'
 require 'rubygems'
 require 'rest_client'
 require 'json'
-require 'aws/s3'
+require 'yaml'
 
-puts ENV.inspect
+#require 'aws/s3'
+
 
 # Loading all the Ruby project files.
 main = File.basename(__FILE__, File.extname(__FILE__))
 dir_path = NSBundle.mainBundle.resourcePath.fileSystemRepresentation
 Dir.glob(File.join(dir_path, '*.{rb,rbo}')).map { |x| File.basename(x, File.extname(x)) }.uniq.each do |path|
   if path != main
-    if !path.include? "_test" 
-      require(path)
-    end
+    require(path)
   end
 end
 
