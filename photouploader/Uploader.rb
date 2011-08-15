@@ -17,9 +17,8 @@ class Uploader
       :access_key_id     => s3_access_key,
       :secret_access_key => s3_secret_access_key
     )
-    
-    puts "#{filename} - #{file} - #{s3_bucket}"
-    object = AWS::S3::S3Object.store(filename, file, s3_bucket, :access => :public_read)
+
+  object = AWS::S3::S3Object.store(filename, file, s3_bucket, :access => :public_read)
     "http://s3.amazonaws.com/" + s3_bucket  + "/" + filename
   end
 end
