@@ -64,6 +64,7 @@ class UploadController
   
   def next_photo please
     return if @stopEverything
+    return if photos.count < 1
     
     photo = photos.shift
     @i = @i + 1

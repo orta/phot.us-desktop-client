@@ -12,6 +12,7 @@ class SheetController
   attr_accessor :mainWindow, :sheet, :uploadController, :current_photo, :message, :photo_index, :photo_count, :enabled
   
   def open_sheet(sender)
+    return unless uploadController.photos.count
     setup_defaults
     NSApp.beginSheet sheet, modalForWindow: mainWindow, modalDelegate: self, didEndSelector: nil, contextInfo: nil
     self.enabled = true

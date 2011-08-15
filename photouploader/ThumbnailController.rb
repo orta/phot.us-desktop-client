@@ -15,6 +15,10 @@ class ThumbnailController
     
     scaledImage.lockFocus
     NSGraphicsContext.currentContext.setImageInterpolation NSImageInterpolationHigh
+    if photo.crop.class == String
+      photo.crop = NSRectFromString photo.crop
+    end
+
     if photo.crop
       image.drawInRect(NSMakeRect(0, 0, width, height), fromRect: photo.crop, operation: NSCompositeCopy, fraction: 1.0)
     else

@@ -26,7 +26,6 @@ class PhotoController
   end
 
   def set_images image_array
-    puts "settting"
     @images = image_array
     imageBrowserView.reloadData
   end
